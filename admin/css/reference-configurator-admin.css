@@ -1,0 +1,62 @@
+/*====================================
+=            Admin Styles            =
+====================================*/
+/*
+.metabox-holder input,
+.metabox-holder textarea {
+  width: 100%;
+  display: block;
+}
+
+.metabox-holder input {
+  max-width: 250px;
+}
+
+.metabox-holder textarea {
+  max-width: 500px;
+}
+
+.spinner {
+  float: left;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.submit-wrap .submit {
+  float: left;
+  padding-top: 0;
+}
+*/
+
+.references__list {
+    width: 20%;
+    min-width: 400px;
+    border: 1px solid #6d6e6e;
+}
+
+.references__list li{
+    padding: 10px 10px 12px;
+    display: block;
+    position: relative;
+    margin: 0;
+
+}
+
+.references__list li:nth-child(2n+1){
+    background: #6d6e6e;
+    color: #fff;
+}
+
+.references__list li:nth-child(2n+1) a {
+    color: #fff;
+}
+
+.references__list a{
+    margin: 0 30px 0 0;
+    color: #6d6e6e;
+
+}
+.references__list .remove-pdf{
+    position: absolute;
+    right: 10px;
+}

@@ -1,0 +1,301 @@
+/*=======================================
+=            Frontend Styles            =
+========================================*/
+
+.projects, .project__search, .project__droppable, .project__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.projects:after {
+    content: '';
+    flex: 0 0 31.33333%;
+}
+
+.info {
+    margin-bottom: 30px;
+}
+
+.info.hide {
+    display: none;
+}
+
+.ajax-loader, .mail-loader {
+    display: none;
+}
+
+.project__container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 31.33333%;
+    flex: 0 0 31.33333%;
+    max-width: 31.33333%;
+    position: relative;
+    width: 100%;
+    min-height: 330px;
+    padding: 10px;
+    border: 2px solid #b5b5b5;
+    cursor: move;
+    margin-bottom: 30px;
+}
+
+.project__image {
+    min-width: 200px;
+}
+
+.project__title {
+    padding: 5px 0;
+}
+
+.project__links {
+
+}
+
+.project__droppable {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 30px 0;
+    border: 2px solid #b5b5b5;
+    min-height: 330px;
+    overflow-x: scroll;
+    background: #b6c7d7;
+    transition: background 0.3s;
+    -webkit-transition: background 0.3s;
+}
+
+.project__droppable:after {
+    content: '';
+    flex: 0 0 31.33333%;
+}
+
+.project__droppable.empty {
+    overflow-x: hidden;
+}
+
+.project__droppable .project__container {
+    margin: 0 10px;
+}
+
+.ui-draggable-disabled {
+    opacity: 0.6;
+    cursor: auto;
+}
+
+.ui-droppable-hover
+{
+    background: #ddd;
+}
+
+.icon-ok {
+    display: none;
+}
+
+.icon-remove {
+    display: none;
+    cursor: pointer;
+}
+
+.project__droppable .icon-remove {
+    display: block;
+}
+
+.project__droppable .icon-add {
+    display: none !important;
+}
+
+.icon, .project-remove {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.icon-medium {
+    font-size: 3em;
+}
+
+.icon-ok {
+    color: darkgreen;
+}
+
+.icon-remove {
+    color: red;
+}
+
+.icon-add {
+    color: blue;
+}
+
+.icon-add:hover {
+    cursor: pointer;
+}
+
+/*searching*/
+.search__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 31.33333%;
+    flex: 0 0 31.33333%;
+    max-width: 31.33333%;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.search__select, .search__input{
+    padding: 10px 10px !important;
+    min-height:  39px;
+}
+
+.search__select {
+    width: 100%;
+}
+
+.search__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.search__input {
+    flex: 0 0 70%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 70%;
+}
+
+.search__button {
+    flex: 0 0 30%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    min-height: 100%!important;
+    background-color: #ddd;
+    cursor: pointer;
+
+    margin: 0;
+    padding: 0.715em;
+    border: 1px solid #ddd;
+    color: #666;
+    line-height: normal!important;
+}
+
+/*buttons*/
+.project__buttons {
+    margin: 30px 0 0 0;
+}
+
+.project__buttons a{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 31.33333%;
+    flex: 0 0 31.33333%;
+    max-width: 31.33333%;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+/*pagination */
+.pagination {
+    padding: 0 !important;
+}
+
+.pagination ul {
+    float: right;
+    padding: 0 0 23px 0 !important;
+}
+
+.light-theme a, .light-theme span {
+    margin: 0 0 0 7px !important;
+}
+
+/*form to send pdf*/
+.project__form {
+    display: none;
+}
+
+.project__form input, .project__form textarea {
+    padding: 7px 10px !important;
+    border: 2px solid #b5b5b5 !important;
+    margin: 10px 10px 10px 0 !important;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1.2em;
+}
+
+label.error {
+    color: red;
+}
+
+.project__form input.error
+{
+    border: 2px solid red;
+}
+
+.project__form input#pdf-send-mail {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.project__form input#pdf-send-mail:hover {
+    background: #b5b5b5;
+    color: #fff;
+}
+
+
+@media (max-width: 1024px) {
+    .projects .project__container
+    {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 48%;
+        min-height: auto;
+    }
+
+    .project_droppable {
+        min-height: 250px;
+    }
+
+    .project__image{
+        min-width: auto;
+    }
+
+    .project__droppable .project__container {
+        min-height: auto;
+        min-width: 200px;
+    }
+
+    .projects:after, .project__droppable:after {
+        content: '';
+        flex: 0 100%;
+    }
+
+    .project__search, .project__buttons {
+        flex-direction: column;
+    }
+
+    .search__item, .project__buttons a{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .downloads, .ajax-loader, .mail-loader {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects .project__container
+    {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-height: auto;
+    }
+}
