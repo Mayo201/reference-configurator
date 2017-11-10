@@ -80,6 +80,11 @@ class Admin
 
     public function get_pdfs(){
 	    $upload_dir = wp_upload_dir();
+
+	    if (!file_exists($upload_dir['basedir']."/pdfs")) {
+		    mkdir($upload_dir['basedir']."/pdfs", 0777, true);
+	    }
+
 	    $path_dir   = $upload_dir['basedir'] . '/pdfs';
 	    $allfiles = scandir($path_dir);
 	    $pdfs = array_diff($allfiles, array('.', '..'));

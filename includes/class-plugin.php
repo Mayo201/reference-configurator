@@ -24,6 +24,10 @@ class Plugin
     }
 
     private function load_dependencies() {
+	    $upload_dir = wp_upload_dir();
+    	if (!file_exists($upload_dir['basedir']."/pdfs")) {
+		    mkdir($upload_dir['basedir']."/pdfs", 0777, true);
+	    }
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-loader.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-admin.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'frontend/class-frontend.php';
