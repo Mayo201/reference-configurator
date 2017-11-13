@@ -1,7 +1,9 @@
 Reference Configurator Wordpress plugin
 
+Drag and drop projects to droppable area and generate pdf references.
+
 Instalation:
-1. Upload `reference-configurator` directory to the `/wp-content/plugins/` directory
+1. Upload files to `reference-configurator` directory and copy it to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 Usage:

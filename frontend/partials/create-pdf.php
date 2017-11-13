@@ -7,15 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$projects = $_POST['projects'];
 	if($projects != null) {
 		$html = stripslashes( '<style>'.file_get_contents( plugins_url( '/reference-configurator/frontend/css/pdf_style.css' ) ).'</style>' );
-		$html .= '<div class="divider"></div><div class="footer"><img src="' . plugins_url( "/reference-configurator/frontend/assets/images/logo.png" ) . '" alt="footer_logo"/></div>';
-		$html .= '<div class="header_logo"><img src="' . plugins_url( "/reference-configurator/frontend/assets/images/logo.png" ) . '" alt="logo"/></div>';
-		$html .= '<div class="header_image"><img src="' . plugins_url( "/reference-configurator/frontend/assets/images/main_image.png" ) . '" alt="main_image"/></div>';
 
 		foreach ( $projects as $p ) {
 			$html .= stripslashes( $p['details'] );
 		}
 
-		$html .= '<div class="footer_image"><img src="' . plugins_url( "/reference-configurator/frontend/assets/images/footer_image.png" ) . '" alt="footer_image"/></div>';
 
 		$dompdf->loadHtml( $html );
 		$dompdf->setPaper( 'A4', 'landscape' );
